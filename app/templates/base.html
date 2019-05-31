@@ -1,0 +1,28 @@
+{% extends 'bootstrap/base.html' %}
+
+
+{% block title %}
+  Flask Integration
+{% endblock %}
+
+
+{% block styles %}
+  {{ super() }}
+  <link rel="stylesheet" href="../static/css/main.css">
+{% endblock %}
+
+
+{% block navbar %}
+
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="url_for('index')">Home</a>
+  <a class="navbar-brand" href="{{ url_for('graph')}}">Graph</a>
+  <a class="navbar-brand" href="{{ url_for('dataframe')}}">DataFrame</a>
+</nav>
+
+{% endblock %}
+
+
+{% block content %}
+  {% block app_content%}{% endblock %}
+{% endblock %}
